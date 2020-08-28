@@ -5,7 +5,7 @@ import { Photo } from '../photo/photo';
 import { PhotoService } from '../photo/photo.service';
 
 @Component({
-  selector: 'ap-photo-list',
+  selector: 'app-photo-list',
   templateUrl: './photo-list.component.html',
   styleUrls: ['./photo-list.component.css']
 })
@@ -20,7 +20,7 @@ export class PhotoListComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private photoService: PhotoService
-    ) { }
+  ) { }
 
   ngOnInit(): void {
     this.userName = this.activatedRoute.snapshot.params.userName;
@@ -36,5 +36,4 @@ export class PhotoListComponent implements OnInit {
         if(!photos.length) this.hasMore = false;
       });
   }
-
 }
